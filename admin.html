@@ -204,8 +204,8 @@
 
 <script>
 const ADMIN_PW = '1234';
-const COLORS = ['#A8D8EA','#B8E0D2','#C9E4CA'];
-const DEFAULT_BENEFITS = ['탄산음료 무료','생수 무료','메뉴 10% 할인'];
+const COLORS = ['#A8D8EA','#B8E0D2','#C9E4CA','#D0E8F2'];
+const DEFAULT_BENEFITS = ['탄산음료 무료','생수 무료','메뉴 10% 할인','단품 주문시 세트 업그레이드'];
 
 let benefits = DEFAULT_BENEFITS.slice();
 try {
@@ -234,7 +234,7 @@ function renderEditor() {
 }
 
 function syncPreview() {
-  for (let i = 0; i < 3; i++) {
+  for (let i = 0; i < 4; i++) {
     const el = document.getElementById('b'+i);
     if (el) benefits[i] = el.value;
   }
@@ -242,7 +242,7 @@ function syncPreview() {
 }
 
 function saveBenefits() {
-  for (let i = 0; i < 3; i++) {
+  for (let i = 0; i < 4; i++) {
     const el = document.getElementById('b'+i);
     if (el) benefits[i] = el.value;
   }
